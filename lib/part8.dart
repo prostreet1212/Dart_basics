@@ -1,5 +1,4 @@
-//реализация конструкторов AdminUser, GeneralUser
-//List для вх.данных только Userтип могу передать
+
 void main (){
   AdminUser admin=AdminUser('dima', true,'admin@kdrc.ru');
   print('Почта ${admin.email}: домен ${admin.getEmailSystem()}');
