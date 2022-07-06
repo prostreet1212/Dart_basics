@@ -1,4 +1,4 @@
-
+//
 void main (){
   AdminUser admin=AdminUser('dima', true,'admin@kdrc.ru');
   print('Почта ${admin.email}: домен ${admin.getEmailSystem()}');
