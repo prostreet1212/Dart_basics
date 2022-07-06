@@ -3,7 +3,7 @@ void main (){
   AdminUser admin=AdminUser('dima', true,'admin@kdrc.ru');
   print('Почта ${admin.email}: домен ${admin.getEmailSystem()}');
 
-
+int a=0;
   GeneralUser boss=GeneralUser('ludmila', 70, 'mail@yandex.ru');
   User simpleUser=User('pochta@rambler.ru');
 
