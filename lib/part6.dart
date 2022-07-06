@@ -11,7 +11,8 @@ void main() {
   Point p1 = Point(1, 1, 1);
   Point p2 = Point(1, 2, 3);
   Point p3 = Point(8, 2, 3);
-  print('Площадь треугольника: ${Point.empty().getSuare(p1, p2, p3).toStringAsFixed(2)}');
+  print(
+      'Площадь треугольника: ${Point.empty().getSuare(p1, p2, p3).toStringAsFixed(2)}');
 }
 
 class Point {
@@ -35,7 +36,7 @@ class Point {
     return Point(1, 1, 1);
   }
 
-  Point.named({required double x, required double y, required double z});
+  Point.named({required this.x, required this.y, required this.z});
 
   factory Point.fromJson(Map<String, dynamic> json) {
     return Point.named(
@@ -52,11 +53,14 @@ class Point {
   }
 
   double getSuare(Point p1, Point p2, Point p3) {
-    var AB=sqrt(pow((p1.x-p2.x), 2)+pow((p1.z-p2.z), 2)+pow((p1.y-p2.y), 2));
-    var BC=sqrt(pow((p2.x-p3.x), 2)+pow((p2.z-p3.z), 2)+pow((p2.y-p3.y), 2));
-    var AC=sqrt(pow((p1.x-p3.x), 2)+pow((p1.z-p3.z), 2)+pow((p1.y-p3.y), 2));
-    var P=(AB+BC+AC)/2;
-    var S=sqrt((P-AB)*(P-AC)*(P-BC)*P);
+    var AB = sqrt(
+        pow((p1.x - p2.x), 2) + pow((p1.z - p2.z), 2) + pow((p1.y - p2.y), 2));
+    var BC = sqrt(
+        pow((p2.x - p3.x), 2) + pow((p2.z - p3.z), 2) + pow((p2.y - p3.y), 2));
+    var AC = sqrt(
+        pow((p1.x - p3.x), 2) + pow((p1.z - p3.z), 2) + pow((p1.y - p3.y), 2));
+    var P = (AB + BC + AC) / 2;
+    var S = sqrt((P - AB) * (P - AC) * (P - BC) * P);
 
     return S;
   }

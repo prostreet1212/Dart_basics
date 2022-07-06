@@ -22,7 +22,7 @@ class MapInList {
   Map<String, int> getMapFromList(List<String> str) {
     var map = <String, int>{};
     int count = 1;
-    
+
     for (int i = 0; i < str.length - 1; i++) {
       for (int j = i + 1; j < str.length; j++) {
         if (str[i] == str[j]) {
@@ -37,7 +37,6 @@ class MapInList {
           str.removeAt(0);
           i--;
         }
-
         if (str.length == 1) {
           var v = {str[0]: count};
           map.addAll(v);

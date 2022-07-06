@@ -5,7 +5,7 @@ void main() {
 
   int n = 97;
   print('Число $n в двоичной системе:${dd.decimalToBinary(n)}');
-  int m=101101001;
+  int m = 101101001;
   print('Число $m в десятичной системе:${dd.binaryToDecimal(101101001)}');
 }
 
@@ -26,7 +26,6 @@ class DecimalBinary {
       result.add(1);
       result = result.reversed.toList();
     }
-
     return int.parse('${result.join()}');
   }
 

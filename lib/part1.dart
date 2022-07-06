@@ -1,11 +1,10 @@
 library flutter_skillbox_module2;
 
-
 void main() {
   var dc = DelimetersCalculator();
   print('Наибольший общий делитель: ${dc.nod2(22, 121)}');
-  print('Наименьшее общее кратное: ${dc.nok(4,14)}');
-  int n=126;
+  print('Наименьшее общее кратное: ${dc.nok(4, 14)}');
+  int n = 126;
   print('Простые множители числа ${n}: ${dc.getMultiple(n)}');
 }
 
@@ -45,24 +44,23 @@ class DelimetersCalculator {
     return numberList[0];
   }
 
-  int nok(int firstNumber, int secondNumber){
-
-    return (firstNumber/nod2(firstNumber,secondNumber)*secondNumber).toInt();
+  int nok(int firstNumber, int secondNumber) {
+    return (firstNumber / nod2(firstNumber, secondNumber) * secondNumber)
+        .toInt();
   }
 
-  List<int> getMultiple(int number){
-    List<int> result=List.empty(growable: true);
-    num currNumb=number;
-    int probe=2;
-    while(currNumb!=1){
-      if(currNumb%probe!=0){
+  List<int> getMultiple(int number) {
+    List<int> result = List.empty(growable: true);
+    num currNumb = number;
+    int probe = 2;
+    while (currNumb != 1) {
+      if (currNumb % probe != 0) {
         probe++;
-      }else{
-        currNumb=currNumb/probe;
+      } else {
+        currNumb = currNumb / probe;
         result.add(probe);
       }
     }
     return result;
   }
-
 }

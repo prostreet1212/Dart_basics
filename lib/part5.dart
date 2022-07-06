@@ -1,12 +1,25 @@
 void main() {
   FindNumbers fn = FindNumbers();
-  var input = ['one', 'two', 'three', 'cat', 'dog','zero', 'eight','ball','log','two','dart'];
+  var input = [
+    'one',
+    'two',
+    'three',
+    'cat',
+    'dog',
+    'zero',
+    'eight',
+    'ball',
+    'log',
+    'two',
+    'dart'
+  ];
 
-  print('Список: ${input}, содержит следующие цифры: ${fn.findNumbersInList(input)}');
+  print(
+      'Список: ${input}, содержит следующие цифры: ${fn.findNumbersInList(input)}');
 }
 
 class FindNumbers {
-  static final List<String> numbers = [
+  final List<String> numbers = [
     'zero',
     'one',
     'two',
